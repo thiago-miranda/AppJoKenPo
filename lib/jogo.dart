@@ -23,7 +23,18 @@ class _JogoState extends State<Jogo> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Image.asset("images/padrao.png"),
+            GestureDetector(
+              onTap: () {
+                print("clique");
+              },
+              onDoubleTap: () {
+                print("duplo clique");
+              },
+              onLongPress: () {
+                print("long clique");
+              },
+              child: Image.asset("images/padrao.png"),
+            ),
             Padding(
               padding: EdgeInsets.only(top: 32, bottom: 16),
               child: Text(
